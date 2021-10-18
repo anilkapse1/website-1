@@ -1,0 +1,132 @@
+// partials file import
+@import "variables";
+@import "mixin";
+@import "classes";
+
+/*
+header code 
+*/
+
+.achieve{
+    margin-top: $mt-80;
+    .achieve-overlay{
+        @include screenoverlay();
+    }
+    .inner-container{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        .content{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;    
+            align-items: center;       
+            article{
+                color:red;
+                h1{
+                    @include commonfont($h1,$primaryColor,$textcap);
+                    margin-bottom: $mb-20;
+                }
+                p{
+                    @include commonfont($small,$primaryColor,$textnon,1.5);
+                    margin-bottom: $mb-20;
+                }   
+                button{
+                    @include btn();
+                }
+           }
+       }
+       .bottom-content{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;    
+        align-items: center;       
+        article{
+            text-align: center;
+            flex-grow: 1;
+            flex-basis: 220px;
+            img{
+
+            }
+            h1{
+                @include commonfont($h1,$tertiaryColor,$textcap);
+                margin-bottom: $mb-20;
+            }
+            p{
+                @include commonfont($small,$primaryColor,$textnon,1.5);
+                margin-bottom: $mb-20;
+            }   
+        }
+       }
+    }
+    .testimonial{
+        background-color: $primaryColor;
+        .inner-container{
+            h3{
+                @include commonfont($h3,$greyColor,$textup);
+            }
+
+            h1{
+             @include commonfont($h1,$secondaryColor,$textcap);
+             margin-bottom: $mb-20;
+            }
+            .client-card{
+                ul{
+                    margin: 26px auto;
+                    text-align: center;
+                    li{
+                        display: inline-block;
+                        width: 30px;
+                        border: 2px solid $greyColor;
+                        margin: 0px 5px;                
+                        button{
+                            margin: 0px 10px;
+                        }
+                    }
+                    li.slick-active{
+                        border: 2px solid $tertiaryColor;
+                    }
+                }
+                .slick-next,.slick-prev{
+                    display: none!important;
+                }
+        
+                .card{
+                    &:focus{
+                        outline: unset;
+                    }
+                    display: flex;
+                    flex-wrap: wrap;
+                    .card-img{
+                        @include media(min,$tablet){
+                            flex-basis: 300px;
+                        }
+                        img{
+                            max-width: 250px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .card-item{
+                        color:blue;
+                    }
+                    .card-text{
+                        @include media(min,$tablet){
+                            flex-basis: calc(100% - 300px)
+                        }
+                        p{
+                            @include commonfont($small,$greyColor,$textnon,1.8);
+                            margin-bottom: $mb-20;
+                        }
+                        h3{
+                            @include commonfont($h3,$secondaryColor,$textnon);
+                        }
+                        span{
+                            @include commonfont($small,$greyColor,$textup);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

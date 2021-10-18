@@ -1,0 +1,55 @@
+// mixin for h1,h2,h3,p
+
+@mixin commonfont($fs,$fc,$tt,$lh:normal) {
+    font-size: $fs;
+    color:$fc;
+    text-transform:$tt;
+    line-height: $lh;
+    word-wrap: break-word;
+}
+
+// mixin for button
+@mixin btn {
+    color: $primaryColor;
+    background-color: $tertiaryColor;
+    padding: 10px;
+    border: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+}
+
+//mixin for media
+@mixin media($minMax,$width) {
+    @media screen and (#{$minMax}-width:$width){
+        @content;
+    }
+}
+
+//mixin for overlay
+@mixin screenoverlay($height:100%){
+    position: absolute;
+    height: $height;
+    left: 0px;
+    right: 0px;
+    z-index: -1;        
+    &::before{
+        content: "";
+        background-image: url(../assets/images/whatwedo2.jpg);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        @extend .overlayDarkblue;
+    }
+}
