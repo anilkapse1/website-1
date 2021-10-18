@@ -23,7 +23,12 @@
 header code 
 */
 header {
+<<<<<<< HEAD
   background-image: url("../assets/images/headerbannger.jpg");
+=======
+  background-color: rgba(12, 3, 4, 0.5);
+  background-image: url("../../assets/images/headerbannger.jpg");
+>>>>>>> 5387cd0e475b882d1a13ea3419b296544ffaa5e3
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
@@ -261,7 +266,11 @@ header .inner-container .hero-content button {
 }
 
 .whatwedo .part-one {
+<<<<<<< HEAD
   background-image: url("../assets/images/whatwedo3.jpg");
+=======
+  background-image: url("../../assets/images/whatwedo3.jpg");
+>>>>>>> 5387cd0e475b882d1a13ea3419b296544ffaa5e3
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -270,7 +279,11 @@ header .inner-container .hero-content button {
 }
 
 .whatwedo .part-two {
+<<<<<<< HEAD
   background-image: url("../assets/images/whatwedo2.jpg");
+=======
+  background-image: url("../../assets/images/whatwedo2.jpg");
+>>>>>>> 5387cd0e475b882d1a13ea3419b296544ffaa5e3
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -374,7 +387,11 @@ header .inner-container .hero-content button {
 
 .whatwedo section .content-area article::before {
   content: "";
+<<<<<<< HEAD
   background-image: url(../assets/images/design.png);
+=======
+  background-image: url(../../assets/images/design.png);
+>>>>>>> 5387cd0e475b882d1a13ea3419b296544ffaa5e3
   position: absolute;
   left: 0px;
   width: 100%;
@@ -577,7 +594,11 @@ header code
 
 .vision .vision-overlay::before {
   content: "";
+<<<<<<< HEAD
   background-image: url(../assets/images/whatwedo2.jpg);
+=======
+  background-image: url(../../assets/images/whatwedo2.jpg);
+>>>>>>> 5387cd0e475b882d1a13ea3419b296544ffaa5e3
   position: absolute;
   left: 0px;
   top: 0px;
@@ -714,7 +735,11 @@ header code
 
 .achieve .achieve-overlay::before {
   content: "";
+<<<<<<< HEAD
   background-image: url(../assets/images/whatwedo2.jpg);
+=======
+  background-image: url(../../assets/images/whatwedo2.jpg);
+>>>>>>> 5387cd0e475b882d1a13ea3419b296544ffaa5e3
   position: absolute;
   left: 0px;
   top: 0px;
