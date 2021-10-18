@@ -1,0 +1,33 @@
+// font library
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+// partials file import
+@import "./partials/header";
+@import "./partials/whawedo";
+@import "./partials/ourwork";
+@import "./partials/vision";
+@import "./partials/achieve";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color:#fff;
+    background-color: #fafafa;
+}
+
+img{
+    max-width: 100%;
+}
+
+// css start
+

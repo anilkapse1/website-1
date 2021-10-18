@@ -1,0 +1,163 @@
+// partials file import
+@import "variables";
+@import "mixin";
+@import "classes";
+
+/*
+header code 
+*/
+
+
+header{
+    background-color: rgba(12,3,4,.5);
+    background-image: url("../assets/images/headerbannger.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    .inner-container{
+        height: 100%;
+        display: flex;
+        // flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        nav{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:center;
+            align-items: center;
+            flex-direction: row;
+            img{
+                margin-right: auto;
+                max-width: 80%;
+            }
+            ul{
+                list-style-type: none;
+                li{
+                    display: inline-block;
+                    a{
+                        display: block;
+                        padding: 0px 5px;
+                        text-transform: uppercase;
+                        @include commonfont($small,$primaryColor,$textup)
+                    }
+                }
+            }
+            .hamburger{
+                width: 32px;
+                height: 32px;
+                display: inline-block;
+                position: absolute;
+                right: 30px;
+                top: 10px;
+                padding: 5px;
+                display: none;
+                cursor: pointer;
+                span{
+                    content: '';
+                    height: 2px;
+                    width: 22px;
+                    position: absolute;
+                    top: 46%;
+                    background-color: #000;
+                    display: block;
+                    transition: all 0.5s ease;
+                    &::before{
+                        content: '';
+                        height: 2px;
+                        width: 22px;
+                        position: absolute;
+                        top: 46%;
+                        background-color: #000;
+                        display: block;
+                        top: -6px;
+                    }
+                    &::after{
+                        content: '';
+                        height: 2px;
+                        width: 22px;
+                        position: absolute;
+                        top: 46%;
+                        background-color: #000;
+                        display: block;
+                        top: 6px;
+                    }
+                  }
+            }
+            ul.show{
+                display: block
+            }
+            .hamburger.change{
+                span{
+                    width:0;
+                    &::before{
+                        transform: translate(0px,6px) rotate(45deg);
+                    }
+
+                    &::after{
+                        transform: translate(0px,-6px) rotate(-45deg);
+                    }
+                }
+            }
+
+        }
+
+        .hero-content{
+            text-align: center;
+            margin: 70px 100px;    
+            h3{
+                @include commonfont($p,$tertiaryColor,$textup);
+                letter-spacing: 2px;
+            }
+        
+            h1{
+                @include commonfont($h1,$primaryColor,$textcap);
+            }
+        
+            p{
+                @include commonfont($p,$primaryColor,$textnon);
+                margin: 20px 0px;
+            }
+            button{
+                @include btn();
+            }
+        }
+    }
+}
+
+
+// media start
+@include media(max,$mobile){
+    header{
+        height: auto;
+        .inner-container{
+            nav{
+                flex-direction: column;
+                align-items: flex-start;
+                ul{
+                    display: none;
+                    li{
+                        display: block;
+                        a{
+                            padding: 10px 0px;
+                        }
+                    } 
+                }
+                img{
+                    max-width: 100%;
+                    margin-right: unset;
+                }
+                .hamburger{
+                    display: block;
+                }
+
+            }
+            .hero-content{
+                margin: 75px 0px;
+            }
+        }
+    }
+}
+
+

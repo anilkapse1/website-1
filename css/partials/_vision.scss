@@ -1,0 +1,58 @@
+// partials file import
+@import "variables";
+@import "mixin";
+@import "classes";
+
+/*
+header code 
+*/
+
+.vision{
+    margin-top: $mt-80;
+    position: relative;    
+    .vision-overlay{
+        @include screenoverlay(80%);
+    }
+    .inner-container{
+        padding-top: 80px;
+        h3{
+            @include commonfont($h3,$primaryColor,$textup);
+        }
+        h1{
+            @include commonfont($h1,$primaryColor,$textnon);
+            margin-bottom: $mb-20;
+        }
+        p{
+            @include commonfont($small,$primaryColor,$textnon,1.5);
+        }
+        .visioncard{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: $mt-30;
+            article{
+                text-align: center;
+                box-shadow: 0 0 2px 1px #ddd;
+                background-color: #f8f7f7;
+                padding: 50px 55px;
+                flex-basis: 320px;
+                flex-grow: 1;
+        
+                &:hover{
+                    background-color: $primaryColor;
+                    cursor: pointer;
+                }
+                img{
+                    margin-bottom: $mb-20;
+                }
+                h3{
+                    @include commonfont($h3,$secondaryColor,$textcap);
+                    margin-bottom: $mb-20;
+                }
+                p{
+                    @include commonfont($small,$greyColor,$textnon,1.5);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+// partials file import
+@import "variables";
+@import "mixin";
+@import "classes";
+
+/*
+header code 
+*/
+
+.ourwork{
+    margin-top: $mt-80;    
+    h3{
+        @include commonfont($h3,$greyColor,$textup);
+    }
+    h1{
+        @include commonfont($h1,$secondaryColor,$textcap);
+        margin-bottom: $mb-20;
+    }
+    p{
+        @include commonfont($small,$greyColor,$textnon,1.5);
+    }    
+    .cards{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        ul{
+            margin: 26px auto;
+            li{
+                display: inline-block;
+                width: 30px;
+                border: 2px solid $greyColor;
+                margin: 0px 5px;                
+                button{
+                    margin: 0px 10px;
+                }
+            }
+            li.slick-active{
+                border: 2px solid $tertiaryColor;
+            }
+        }
+        .slick-next,.slick-prev{
+            display: none!important;
+        }
+        .card{
+            flex-basis: 320px;
+            margin: 0px 20px 0px 0px;
+            text-align: center;
+            &:focus{
+                outline: unset;
+            }
+            img{
+                margin-bottom: 10px;
+            }
+            h3{
+                @include commonfont($h3,$secondaryColor,$textup);
+            }
+            span{
+                @include commonfont($xsmall,$greyColor,$textnon,1.5);
+            }
+            p{
+                @include commonfont($small,$greyColor,$textnon,1.5);
+            }
+            .img-social{
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 10px;
+                img{
+                    margin: 0px;
+                }
+                .social{
+                    padding: 15px 0px;
+                    background-color: black;
+                    position: absolute;
+                    left: 0px;
+                    right: 0px;
+                    bottom: -52px;
+                    ul{
+                        margin: 0px;
+                        li{
+                            border: none;
+                        }
+                    }
+                }
+            }
+           
+        }
+    }
+}
